@@ -2,27 +2,31 @@
 import pytest
 from your_module import recommend_colleagues
 
-def test_recommend_colleagues_success():
+def test_recommend_colleagues():
+    # Happy path
     employee = {"id": 1, "name": "John Doe"}
     colleagues = [{"id": 2, "name": "Jane Doe"}, {"id": 3, "name": "Bob Smith"}]
-    pod = {"id": 1, "name": "Pod 1"}
-    assert recommend_colleagues(employee, colleagues, pod) == {"message": "Colleagues recommended successfully"}
+    recommended_colleagues = recommend_colleagues(employee, colleagues)
+    assert len(recommended_colleagues) == 2
+    assert recommended_colleagues[0]["id"] == 2
+    assert recommended_colleagues[1]["id"] == 3
 
-def test_recommend_colleagues_no_colleagues():
+    # Edge case: No colleagues
     employee = {"id": 1, "name": "John Doe"}
     colleagues = []
-    pod = {"id": 1, "name": "Pod 1"}
-    assert recommend_colleagues(employee, colleagues, pod) == {"error": "No colleagues to recommend"}
+    recommended_colleagues = recommend_colleagues(employee, colleagues)
+    assert len(recommended_colleagues) == 0
 
-def test_recommend_colleagues_no_pod():
+    # Edge case: Employee is not in the list of colleagues
+    employee = {"id": 4, "name": "Alice Brown"}
+    colleagues = [{"id": 2, "name": "Jane Doe"}, {"id": 3, "name": "Bob Smith"}]
+    with pytest.raises(ValueError):
+        recommend_colleagues(employee, colleagues)
+
+    # Edge case: Employee is in the list of colleagues
     employee = {"id": 1, "name": "John Doe"}
-    colleagues = [{"id": 2, "name": "Jane Doe"}, {"id": 3, "name": "Bob Smith"}]
-    pod = None
-    assert recommend_colleagues(employee, colleagues, pod) == {"error": "Pod not found"}
-
-def test_recommend_colleagues_employee_not_found():
-    employee = None
-    colleagues = [{"id": 2, "name": "Jane Doe"}, {"id": 3, "name": "Bob Smith"}]
-    pod = {"id": 1, "name": "Pod 1"}
-    assert recommend_colleagues(employee, colleagues, pod) == {"error": "Employee not found"}
+    colleagues = [{"id": 1, "name": "John Doe"}, {"id": 2, "name": "Jane Doe"}]
+    recommended_colleagues = recommend_colleagues(employee, colleagues)
+    assert len(recommended_colleagues) == 1
+    assert recommended_colleagues[0]["id"] == 2
 ```

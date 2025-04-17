@@ -1,16 +1,17 @@
 import os
 from app.langgraph_nodes.test_generator import call_groq
 from app.langgraph_nodes.test_runner import run_pytest, fix_code_with_groq,MAX_RETRIES
+from app.langgraph_nodes.langsmith_logger import log_fix_attempt
 import time
 
 def generate_code_from_tests(project_path: str):
+    print("test folder contents")
     test_folder= os.path.join(project_path,"tests")
     service_folder=os.path.join(project_path,"app","services")
     os.makedirs(service_folder,exist_ok=True)
 
-    for idx,filename in enumerate(test_folder):
-        if idx>=1:
-            break
+    for idx,filename in enumerate(os.listdir(test_folder)):
+        print("processing test file")
         if not filename.startswith("test_") or not filename.endswith(".py"):
             continue
         
@@ -30,16 +31,18 @@ def generate_code_from_tests(project_path: str):
         ===
         Write a FASTAPI-compatible service implementation that will pass this test.
 
-        Enusre:
-        - All edge cases are covered
-        - Return types and value match expectations
-        - Use correct imports and exception handling.
-        - Return only Python code. No Explanation.
+        Ensure:
+        - Pass all Assertions.
+        - Match expected return value and types.
+        - Cover Invalid inputs and edge cases.
+        - Do not leave logic incomplete 
+        - Return only valid Python code. No Explanation.
 
         This code should be placed in 'app/services/ and should work standalone.
         """
 
         code=call_groq(prompt)
+        # print("groq code: ", code[:100])
 
         for attempt in range(MAX_RETRIES+1):
             with open(service_path, "w") as f:
@@ -52,3 +55,4 @@ def generate_code_from_tests(project_path: str):
 
             print(f"Test failed on attempt {attempt+1}")
             code= fix_code_with_groq(test_code,output,code)
+            code= log_fix_attempt(attempt+1,output,code)

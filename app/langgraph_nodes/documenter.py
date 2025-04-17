@@ -48,3 +48,23 @@ def generate_api_docs(project_path: str, analysis:dict):
 
     with open(os.path.join(project_path,"api_docs.md"),"w") as f:
         f.write(content)
+
+def generate_mermaid_flow(project_path:str):
+    mermaid_content= """
+# LangGraph Project Flow Diagram
+
+```mermaid
+graph TD
+    A[SRS Upload(.docx)]-->B[Analyze the SRS (Groq)]
+    B-->C[Generate FastAPI Project (structure)]
+    C-->D[Generate Tests from Business Rules]
+    D-->E[Generate Code to pass test cases]
+    E-->F[ZIP Project]
+    F-->G[Generate Documentation + Diagram]
+    G-->H[Final Output as ZIP]
+        
+```"""
+    
+    file_path=os.path.join(project_path,"flow_diagram.md") 
+    with open(file_path,"w") as f:
+        f.write(mermaid_content.strip())

@@ -1,0 +1,147 @@
+{
+  "project_name": "Python Gen AI SRD backend 14th 18th Apr (1)",
+  "analysis": {
+    "api_endpoints": [
+      {
+        "method": "GET",
+        "path": "/api/dashboard/tiles",
+        "description": "Fetch Dashboard Data"
+      },
+      {
+        "method": "POST",
+        "path": "/api/lms/leaves/apply",
+        "description": "Apply for Leave"
+      },
+      {
+        "method": "GET",
+        "path": "/api/lms/leaves/status",
+        "description": "Retrieve Leave Status"
+      },
+      {
+        "method": "PATCH",
+        "path": "/api/lms/leaves/{leave_id}/approve",
+        "description": "Approve/Reject Leave (Manager Only)"
+      },
+      {
+        "method": "POST",
+        "path": "/api/pods/assign",
+        "description": "Assign Employee to Pod"
+      },
+      {
+        "method": "GET",
+        "path": "/api/pods/{pod_id}/details",
+        "description": "Get Pod Details"
+      },
+      {
+        "method": "POST",
+        "path": "/api/pods/{pod_id}/recommend",
+        "description": "Recommend Employee for Pod"
+      },
+      {
+        "method": "POST",
+        "path": "/api/auth/login",
+        "description": "User Login"
+      },
+      {
+        "method": "GET",
+        "path": "/api/auth/user",
+        "description": "Fetch Current User Details"
+      }
+    ],
+    "database_schema": {
+      "tables": [
+        {
+          "name": "leaves",
+          "columns": [
+            "id",
+            "start_date",
+            "end_date",
+            "reason",
+            "status",
+            "user_id"
+          ]
+        },
+        {
+          "name": "pods",
+          "columns": [
+            "id",
+            "name",
+            "members"
+          ]
+        },
+        {
+          "name": "pod_members",
+          "columns": [
+            "id",
+            "pod_id",
+            "user_id",
+            "role"
+          ]
+        },
+        {
+          "name": "users",
+          "columns": [
+            "id",
+            "email",
+            "password",
+            "role"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "table1": "leaves",
+          "table2": "users",
+          "relationship": "one-to-one",
+          "foreign_key": "user_id"
+        },
+        {
+          "table1": "pods",
+          "table2": "pod_members",
+          "relationship": "one-to-many",
+          "foreign_key": "pod_id"
+        },
+        {
+          "table1": "pod_members",
+          "table2": "users",
+          "relationship": "many-to-one",
+          "foreign_key": "user_id"
+        }
+      ]
+    },
+    "business_rules": [
+      "A user can apply for leave with a specific category.",
+      "A manager can approve or reject a leave request with comments.",
+      "A user can view their granted and pending leave requests.",
+      "A manager can access reports of team leave history.",
+      "A manager can assign employees to specific pods.",
+      "An employee can view their assigned pod.",
+      "An employee can recommend colleagues for inclusion in a pod."
+    ],
+    "auth_requirements": {
+      "roles": [
+        "general_user",
+        "manager"
+      ],
+      "login_mechanisms": [
+        "email_password"
+      ],
+      "rbac": {
+        "general_user": [
+          "apply_for_leave",
+          "view_leave_status",
+          "view_assigned_pod"
+        ],
+        "manager": [
+          "approve_reject_leave",
+          "access_leave_reports",
+          "assign_employees_to_pods"
+        ]
+      }
+    }
+  },
+  "zip_path": "generated_projects/Python Gen AI SRD backend 14th 18th Apr (1).zip",
+  "test_count": 8,
+  "service_count": 7,
+  "status": "success"
+}

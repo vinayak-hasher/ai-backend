@@ -2,6 +2,7 @@ import os
 import httpx
 import time
 from dotenv import load_dotenv
+from app.langgraph_nodes.langsmith_logger import log_test_generation
 load_dotenv()
 
 API_KEYS=[os.getenv("GROQ_API_KEY"),os.getenv("GROQ_API_KEY_2")]
@@ -31,7 +32,7 @@ def call_groq(prompt:str, max_retries=3):
                 response= httpx.post(url,headers=headers,json=body)
                 response.raise_for_status()
                 output= response.json()["choices"][0]["message"]["content"]
-                time.sleep(2)
+                time.sleep(5)
                 return output
             
             except httpx.HTTPStatusError as e:
@@ -59,6 +60,9 @@ def generate_unit_tests(project_path: str, analysis: dict):
         """
 
         test_code=call_groq(prompt)
+
+        test_code= log_test_generation(rule,test_code)
+
         file_path=os.path.join(test_folder, f"test_service_{idx+1}.py")
         with open(file_path, "w") as f:
             f.write(test_code)
