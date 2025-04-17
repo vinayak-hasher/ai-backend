@@ -136,27 +136,27 @@
       "relationships": [
         {
           "table": "leaves",
-          "column": "id",
+          "column": "user_id",
           "references": "users"
         },
         {
           "table": "pod_members",
-          "column": "id",
+          "column": "pod_id",
           "references": "pods"
         },
         {
           "table": "pod_members",
-          "column": "id",
+          "column": "user_id",
           "references": "users"
         }
       ]
     },
     "business_rules": [
-      "A user can apply for leave with a valid start and end date.",
+      "A user can apply for leave with a valid reason and dates.",
       "A manager can approve or reject a leave request with a comment.",
       "A user can view their assigned pod and recommend colleagues for inclusion.",
       "A manager can assign employees to specific pods.",
-      "The system enforces Role-Based Access Control (RBAC) for API access."
+      "The system enforces Role-Based Access Control (RBAC) for all APIs."
     ],
     "auth_requirements": {
       "roles": [
@@ -167,15 +167,7 @@
         "email",
         "password"
       ],
-      "rbac": {
-        "manager": [
-          "lms",
-          "pods"
-        ],
-        "employee": [
-          "lms"
-        ]
-      }
+      "rbac": true
     }
   },
   "zip_path": "generated_projects/Python Gen AI SRD backend 14th 18th Apr (1).zip",

@@ -1,32 +1,32 @@
 ```
-import pytest
-from your_app.models import User, Pod
+def test_view_assigned_pod_and_recommend_colleagues():
+    # Setup
+    user = UserFactory.create()
+    pod = PodFactory.create(assigned_to=user)
+    colleague1 = UserFactory.create()
+    colleague2 = UserFactory.create()
 
-@pytest.fixture
-def user():
-    return User.objects.create(username='test_user')
+    # Test viewing assigned pod
+    response = client.get(f'/pods/{pod.id}')
+    assert response.status_code == 200
+    assert response.json()['id'] == pod.id
 
-@pytest.fixture
-def pod():
-    return Pod.objects.create(name='test_pod')
+    # Test recommending colleagues
+    response = client.post(f'/pods/{pod.id}/recommend', json={'user_ids': [colleague1.id, colleague2.id]})
+    assert response.status_code == 200
+    assert response.json()['recommended_colleagues'] == [colleague1.id, colleague2.id]
 
-def test_user_can_view_assigned_pod(user, pod):
-    user.pod = pod
-    user.save()
-    assert user.pod == pod
+    # Edge case: user not assigned to pod
+    pod.assigned_to = None
+    pod.save()
+    response = client.get(f'/pods/{pod.id}')
+    assert response.status_code == 403
 
-def test_user_cannot_view_unassigned_pod(user, pod):
-    assert user.pod is None
+    # Edge case: invalid pod id
+    response = client.get('/pods/99999')
+    assert response.status_code == 404
 
-def test_user_can_recommend_colleagues_for_inclusion(user, pod):
-    colleague = User.objects.create(username='test_colleague')
-    user.pod = pod
-    user.save()
-    pod.recommended_colleagues.add(colleague)
-    assert colleague in pod.recommended_colleagues.all()
-
-def test_user_cannot_recommend_colleagues_for_unassigned_pod(user, pod):
-    colleague = User.objects.create(username='test_colleague')
-    with pytest.raises(ValueError):
-        pod.recommended_colleagues.add(colleague)
+    # Edge case: invalid user ids
+    response = client.post(f'/pods/{pod.id}/recommend', json={'user_ids': ['invalid', 123]})
+    assert response.status_code == 400
 ```

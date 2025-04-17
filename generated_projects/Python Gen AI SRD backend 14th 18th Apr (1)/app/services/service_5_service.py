@@ -1,19 +1,28 @@
+Here is the corrected Python code:
+
 ```
-from typing import Optional
+from fastapi import FastAPI, HTTPException, Security
+from fastapi.security import OAuth2PasswordBearer
 
-def api_access(role: Optional[str], endpoint: str) -> bool:
-    access_control = {
-        "/admin-only": ["admin"],
-        "/moderator-only": ["moderator", "admin"],
-        "/user-only": ["user", "moderator", "admin"],
-        "/guest-only": ["guest", "user", "moderator", "admin"],
-    }
+app = FastAPI()
 
-    if endpoint not in access_control:
-        return False
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
-    if role is None:
-        return endpoint == "/guest-only"
+def authenticate_token(token: str = Security(oauth2_scheme)):
+    if token == "admin_token":
+        return "admin"
+    elif token == "user_token":
+        return "user"
+    else:
+        raise HTTPException(status_code=401, detail="Invalid token")
 
-    return role in access_control.get(endpoint, []) or role is None and endpoint == "/guest-only"
+@app.get("/api/admin_only")
+def admin_only(token: str = Security(oauth2_scheme)):
+    user = authenticate_token(token)
+    if user == "admin":
+        return {"message": "Admin access granted"}
+    elif user == "user":
+        raise HTTPException(status_code=403, detail="Access denied")
+    else:
+        raise HTTPException(status_code=401, detail="Invalid token")
 ```

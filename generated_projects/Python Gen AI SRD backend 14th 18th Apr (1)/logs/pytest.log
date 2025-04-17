@@ -1,0 +1,2145 @@
+
+=== Pytest Run ===
+============================= test session starts =============================
+platform win32 -- Python 3.13.3, pytest-8.3.5, pluggy-1.5.0
+rootdir: C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)
+plugins: anyio-4.9.0, langsmith-0.3.31
+collected 0 items / 5 errors
+
+=================================== ERRORS ====================================
+__________________ ERROR collecting tests/test_service_1.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_1.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_2.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_2.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_3.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_3.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_4.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_4.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_5.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_5.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ===========================
+ERROR tests/test_service_1.py
+ERROR tests/test_service_2.py
+ERROR tests/test_service_3.py
+ERROR tests/test_service_4.py
+ERROR tests/test_service_5.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 5 errors during collection !!!!!!!!!!!!!!!!!!!
+============================== 5 errors in 0.80s ==============================
+
+
+=== Pytest Run ===
+============================= test session starts =============================
+platform win32 -- Python 3.13.3, pytest-8.3.5, pluggy-1.5.0
+rootdir: C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)
+plugins: anyio-4.9.0, langsmith-0.3.31
+collected 0 items / 5 errors
+
+=================================== ERRORS ====================================
+__________________ ERROR collecting tests/test_service_1.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_1.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_2.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_2.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_3.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_3.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_4.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_4.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_5.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_5.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ===========================
+ERROR tests/test_service_1.py
+ERROR tests/test_service_2.py
+ERROR tests/test_service_3.py
+ERROR tests/test_service_4.py
+ERROR tests/test_service_5.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 5 errors during collection !!!!!!!!!!!!!!!!!!!
+============================== 5 errors in 0.85s ==============================
+
+
+=== Pytest Run ===
+============================= test session starts =============================
+platform win32 -- Python 3.13.3, pytest-8.3.5, pluggy-1.5.0
+rootdir: C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)
+plugins: anyio-4.9.0, langsmith-0.3.31
+collected 0 items / 5 errors
+
+=================================== ERRORS ====================================
+__________________ ERROR collecting tests/test_service_1.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_1.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_2.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_2.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_3.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_3.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_4.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_4.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_5.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_5.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ===========================
+ERROR tests/test_service_1.py
+ERROR tests/test_service_2.py
+ERROR tests/test_service_3.py
+ERROR tests/test_service_4.py
+ERROR tests/test_service_5.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 5 errors during collection !!!!!!!!!!!!!!!!!!!
+============================== 5 errors in 0.89s ==============================
+
+
+=== Pytest Run ===
+============================= test session starts =============================
+platform win32 -- Python 3.13.3, pytest-8.3.5, pluggy-1.5.0
+rootdir: C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)
+plugins: anyio-4.9.0, langsmith-0.3.31
+collected 0 items / 5 errors
+
+=================================== ERRORS ====================================
+__________________ ERROR collecting tests/test_service_1.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_1.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_2.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_2.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_3.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_3.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_4.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_4.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_5.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_5.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ===========================
+ERROR tests/test_service_1.py
+ERROR tests/test_service_2.py
+ERROR tests/test_service_3.py
+ERROR tests/test_service_4.py
+ERROR tests/test_service_5.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 5 errors during collection !!!!!!!!!!!!!!!!!!!
+============================== 5 errors in 0.81s ==============================
+
+
+=== Pytest Run ===
+============================= test session starts =============================
+platform win32 -- Python 3.13.3, pytest-8.3.5, pluggy-1.5.0
+rootdir: C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)
+plugins: anyio-4.9.0, langsmith-0.3.31
+collected 0 items / 5 errors
+
+=================================== ERRORS ====================================
+__________________ ERROR collecting tests/test_service_1.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_1.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_2.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_2.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_3.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_3.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_4.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_4.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_5.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_5.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ===========================
+ERROR tests/test_service_1.py
+ERROR tests/test_service_2.py
+ERROR tests/test_service_3.py
+ERROR tests/test_service_4.py
+ERROR tests/test_service_5.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 5 errors during collection !!!!!!!!!!!!!!!!!!!
+============================== 5 errors in 0.52s ==============================
+
+
+=== Pytest Run ===
+============================= test session starts =============================
+platform win32 -- Python 3.13.3, pytest-8.3.5, pluggy-1.5.0
+rootdir: C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)
+plugins: anyio-4.9.0, langsmith-0.3.31
+collected 0 items / 5 errors
+
+=================================== ERRORS ====================================
+__________________ ERROR collecting tests/test_service_1.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_1.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_2.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_2.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_3.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_3.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_4.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_4.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_5.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_5.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ===========================
+ERROR tests/test_service_1.py
+ERROR tests/test_service_2.py
+ERROR tests/test_service_3.py
+ERROR tests/test_service_4.py
+ERROR tests/test_service_5.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 5 errors during collection !!!!!!!!!!!!!!!!!!!
+============================== 5 errors in 0.78s ==============================
+
+
+=== Pytest Run ===
+============================= test session starts =============================
+platform win32 -- Python 3.13.3, pytest-8.3.5, pluggy-1.5.0
+rootdir: C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)
+plugins: anyio-4.9.0, langsmith-0.3.31
+collected 0 items / 5 errors
+
+=================================== ERRORS ====================================
+__________________ ERROR collecting tests/test_service_1.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_1.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_2.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_2.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_3.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_3.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_4.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_4.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_5.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_5.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ===========================
+ERROR tests/test_service_1.py
+ERROR tests/test_service_2.py
+ERROR tests/test_service_3.py
+ERROR tests/test_service_4.py
+ERROR tests/test_service_5.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 5 errors during collection !!!!!!!!!!!!!!!!!!!
+============================== 5 errors in 1.14s ==============================
+
+
+=== Pytest Run ===
+============================= test session starts =============================
+platform win32 -- Python 3.13.3, pytest-8.3.5, pluggy-1.5.0
+rootdir: C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)
+plugins: anyio-4.9.0, langsmith-0.3.31
+collected 0 items / 5 errors
+
+=================================== ERRORS ====================================
+__________________ ERROR collecting tests/test_service_1.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_1.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_2.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_2.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_3.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_3.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_4.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_4.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_5.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_5.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ===========================
+ERROR tests/test_service_1.py
+ERROR tests/test_service_2.py
+ERROR tests/test_service_3.py
+ERROR tests/test_service_4.py
+ERROR tests/test_service_5.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 5 errors during collection !!!!!!!!!!!!!!!!!!!
+============================== 5 errors in 0.78s ==============================
+
+
+=== Pytest Run ===
+============================= test session starts =============================
+platform win32 -- Python 3.13.3, pytest-8.3.5, pluggy-1.5.0
+rootdir: C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)
+plugins: anyio-4.9.0, langsmith-0.3.31
+collected 0 items / 5 errors
+
+=================================== ERRORS ====================================
+__________________ ERROR collecting tests/test_service_1.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_1.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_2.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_2.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_3.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_3.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_4.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_4.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_5.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_5.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ===========================
+ERROR tests/test_service_1.py
+ERROR tests/test_service_2.py
+ERROR tests/test_service_3.py
+ERROR tests/test_service_4.py
+ERROR tests/test_service_5.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 5 errors during collection !!!!!!!!!!!!!!!!!!!
+============================== 5 errors in 1.48s ==============================
+
+
+=== Pytest Run ===
+============================= test session starts =============================
+platform win32 -- Python 3.13.3, pytest-8.3.5, pluggy-1.5.0
+rootdir: C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)
+plugins: anyio-4.9.0, langsmith-0.3.31
+collected 0 items / 5 errors
+
+=================================== ERRORS ====================================
+__________________ ERROR collecting tests/test_service_1.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_1.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_2.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_2.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_3.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_3.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_4.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_4.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_5.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_5.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ===========================
+ERROR tests/test_service_1.py
+ERROR tests/test_service_2.py
+ERROR tests/test_service_3.py
+ERROR tests/test_service_4.py
+ERROR tests/test_service_5.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 5 errors during collection !!!!!!!!!!!!!!!!!!!
+============================== 5 errors in 1.15s ==============================
+
+
+=== Pytest Run ===
+============================= test session starts =============================
+platform win32 -- Python 3.13.3, pytest-8.3.5, pluggy-1.5.0
+rootdir: C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)
+plugins: anyio-4.9.0, langsmith-0.3.31
+collected 0 items / 5 errors
+
+=================================== ERRORS ====================================
+__________________ ERROR collecting tests/test_service_1.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_1.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_2.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_2.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_3.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_3.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_4.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_4.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_5.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_5.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ===========================
+ERROR tests/test_service_1.py
+ERROR tests/test_service_2.py
+ERROR tests/test_service_3.py
+ERROR tests/test_service_4.py
+ERROR tests/test_service_5.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 5 errors during collection !!!!!!!!!!!!!!!!!!!
+============================== 5 errors in 0.61s ==============================
+
+
+=== Pytest Run ===
+============================= test session starts =============================
+platform win32 -- Python 3.13.3, pytest-8.3.5, pluggy-1.5.0
+rootdir: C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)
+plugins: anyio-4.9.0, langsmith-0.3.31
+collected 0 items / 5 errors
+
+=================================== ERRORS ====================================
+__________________ ERROR collecting tests/test_service_1.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_1.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_2.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_2.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_3.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_3.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_4.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_4.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_5.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_5.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ===========================
+ERROR tests/test_service_1.py
+ERROR tests/test_service_2.py
+ERROR tests/test_service_3.py
+ERROR tests/test_service_4.py
+ERROR tests/test_service_5.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 5 errors during collection !!!!!!!!!!!!!!!!!!!
+============================== 5 errors in 0.97s ==============================
+
+
+=== Pytest Run ===
+============================= test session starts =============================
+platform win32 -- Python 3.13.3, pytest-8.3.5, pluggy-1.5.0
+rootdir: C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)
+plugins: anyio-4.9.0, langsmith-0.3.31
+collected 0 items / 5 errors
+
+=================================== ERRORS ====================================
+__________________ ERROR collecting tests/test_service_1.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_1.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_2.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_2.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_3.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_3.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_4.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_4.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_5.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_5.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ===========================
+ERROR tests/test_service_1.py
+ERROR tests/test_service_2.py
+ERROR tests/test_service_3.py
+ERROR tests/test_service_4.py
+ERROR tests/test_service_5.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 5 errors during collection !!!!!!!!!!!!!!!!!!!
+============================== 5 errors in 1.25s ==============================
+
+
+=== Pytest Run ===
+============================= test session starts =============================
+platform win32 -- Python 3.13.3, pytest-8.3.5, pluggy-1.5.0
+rootdir: C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)
+plugins: anyio-4.9.0, langsmith-0.3.31
+collected 0 items / 5 errors
+
+=================================== ERRORS ====================================
+__________________ ERROR collecting tests/test_service_1.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_1.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_2.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_2.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_3.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_3.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_4.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_4.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_5.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_5.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ===========================
+ERROR tests/test_service_1.py
+ERROR tests/test_service_2.py
+ERROR tests/test_service_3.py
+ERROR tests/test_service_4.py
+ERROR tests/test_service_5.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 5 errors during collection !!!!!!!!!!!!!!!!!!!
+============================== 5 errors in 1.44s ==============================
+
+
+=== Pytest Run ===
+============================= test session starts =============================
+platform win32 -- Python 3.13.3, pytest-8.3.5, pluggy-1.5.0
+rootdir: C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)
+plugins: anyio-4.9.0, langsmith-0.3.31
+collected 0 items / 5 errors
+
+=================================== ERRORS ====================================
+__________________ ERROR collecting tests/test_service_1.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_1.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_2.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_2.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_3.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_3.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_4.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_4.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_service_5.py ___________________
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py:493: in importtestmodule
+    mod = import_path(
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\assertion\rewrite.py:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+..\..\..\..\AppData\Local\Programs\Python\Python313\Lib\ast.py:54: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\vinvinayak\Desktop\ai-backend\generated_projects\Python Gen AI SRD backend 14th 18th Apr (1)\tests\test_service_5.py", line 1
+E       ```
+E       ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ===========================
+ERROR tests/test_service_1.py
+ERROR tests/test_service_2.py
+ERROR tests/test_service_3.py
+ERROR tests/test_service_4.py
+ERROR tests/test_service_5.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 5 errors during collection !!!!!!!!!!!!!!!!!!!
+============================== 5 errors in 1.54s ==============================
+

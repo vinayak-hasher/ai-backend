@@ -1,10 +1,26 @@
+Here is the corrected Python code:
+
 ```
-def assign_employee_to_pod(manager, employee, pod):
-    if not manager or not isinstance(manager, str):
-        raise ValueError("Manager is required and must be a string")
-    if not employee or not isinstance(employee, str):
-        raise ValueError("Employee is required and must be a string")
-    if not pod or not isinstance(pod, str):
-        raise ValueError("Pod is required and must be a string")
-    return f"{employee} assigned to {pod} by {manager}"
+from typing import List
+
+class Employee:
+    def __init__(self, id: int):
+        self.id = id
+        self.pods = []
+
+class Pod:
+    def __init__(self, id: int):
+        self.id = id
+        self.employees = []
+
+class Manager:
+    def assign_employee_to_pod(self, employee: Employee, pod: Pod) -> None:
+        if employee is None:
+            raise TypeError("Employee cannot be None")
+        if pod is None:
+            raise TypeError("Pod cannot be None")
+        if employee in pod.employees:
+            raise ValueError("Employee is already assigned to this pod")
+        pod.employees.append(employee)
+        employee.pods.append(pod)
 ```

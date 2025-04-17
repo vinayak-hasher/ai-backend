@@ -1,11 +1,8 @@
-Here is the corrected code:
+Here is the corrected Python code:
 
 ```
-from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import Optional
-
-app = FastAPI()
 
 class Manager(BaseModel):
     id: int
@@ -15,12 +12,12 @@ class LeaveRequest(BaseModel):
     employee_id: int
     start_date: str
     end_date: str
-    status: Optional[str] = None
+    status: str = "Pending"
     comment: Optional[str] = None
 
     def approve(self, manager: Manager, comment: str):
         if manager.id != 1:
-            raise PermissionError("Only manager with id 1 can approve")
+            raise PermissionError("Only manager with id 1 can approve/reject leave requests")
         if not comment:
             raise ValueError("Comment cannot be empty")
         self.status = "Approved"
@@ -28,7 +25,7 @@ class LeaveRequest(BaseModel):
 
     def reject(self, manager: Manager, comment: str):
         if manager.id != 1:
-            raise PermissionError("Only manager with id 1 can reject")
+            raise PermissionError("Only manager with id 1 can approve/reject leave requests")
         if not comment:
             raise ValueError("Comment cannot be empty")
         self.status = "Rejected"

@@ -1,10 +1,10 @@
 Here is the corrected Python code:
 
 ```
-from datetime import datetime, timedelta
-
-def apply_for_leave(start_date, end_date):
-    if start_date < datetime.now().date():
+def apply_for_leave(reason: str, start_date: datetime, end_date: datetime):
+    if not reason.strip():  # Check if reason is empty or contains only whitespace
+        raise ValueError("Reason cannot be empty")
+    if start_date < datetime.now():
         raise ValueError("Start date cannot be in the past")
     if end_date < start_date:
         raise ValueError("End date cannot be before start date")
