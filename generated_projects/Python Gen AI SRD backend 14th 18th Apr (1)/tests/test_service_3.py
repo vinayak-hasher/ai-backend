@@ -1,27 +1,20 @@
 ```
 import pytest
-from your_app.models import Employee, LeaveRequest
+from django.contrib.auth.models import User
+from leave_management.models import LeaveRequest
+from leave_management.views import view_leave_requests
 
-@pytest.fixture
-def employee():
-    return Employee.objects.create_user('test@example.com', 'password123')
+@pytest.mark.django_db
+def test_view_leave_requests():
+    user = User.objects.create_user(username='test_user', password='password')
+    leave_request1 = LeaveRequest.objects.create(user=user, status='granted')
+    leave_request2 = LeaveRequest.objects.create(user=user, status='pending')
+    leave_request3 = LeaveRequest.objects.create(user=User.objects.create_user(username='other_user', password='password'), status='granted')
 
-@pytest.fixture
-def leave_request(employee):
-    return LeaveRequest.objects.create(employee=employee, status='pending')
+    response = view_leave_requests(user)
 
-def test_employee_can_view_granted_leave_request(employee):
-    granted_request = LeaveRequest.objects.create(employee=employee, status='granted')
-    assert employee.leave_requests.filter(status='granted').exists()
-
-def test_employee_can_view_pending_leave_request(employee, leave_request):
-    assert employee.leave_requests.filter(status='pending').exists()
-
-def test_employee_cannot_view_others_leave_request(employee, leave_request):
-    other_employee = Employee.objects.create_user('other@example.com', 'password123')
-    assert not other_employee.leave_requests.filter(status='pending').exists()
-
-def test_employee_cannot_view_deleted_leave_request(employee):
-    deleted_request = LeaveRequest.objects.create(employee=employee, status='pending', deleted_at='2022-01-01')
-    assert not employee.leave_requests.filter(status='pending').exists()
+    assert len(response) == 2
+    assert leave_request1 in response
+    assert leave_request2 in response
+    assert leave_request3 not in response
 ```

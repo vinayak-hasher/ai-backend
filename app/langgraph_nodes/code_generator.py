@@ -1,5 +1,7 @@
 import os
 from app.langgraph_nodes.test_generator import call_groq
+from app.langgraph_nodes.test_runner import run_pytest, fix_code_with_groq,MAX_RETRIES
+import time
 
 def generate_code_from_tests(project_path: str):
     test_folder= os.path.join(project_path,"tests")
@@ -9,24 +11,42 @@ def generate_code_from_tests(project_path: str):
     for filename in os.listdir(test_folder):
         if not filename.startswith("test_") or not filename.endswith(".py"):
             continue
+        
 
-        file_path=os.path.join(test_folder,filename)
+        test_path=os.path.join(test_folder,filename)
+        service_filename=filename.replace("test_","").replace(".py","_service.py")
+        service_path= os.path.join(service_folder, service_filename)
 
-        with open(file_path,"r") as f:
+        with open(test_path,"r") as f:
             test_code=f.read()
 
         prompt=f"""
-        The following is a pytest test case file.
-        Your task is to write a FastAPI-compatible Pyhton service function that will pass all these tests.
-        Follow good coding practices, handle edge cases, and return only the code.
-
-        Test File Content:
+        You are a backend developer.
+        This is a pytest unit test.
+        ===
         {test_code}
+        ===
+        Write a FASTAPI-compatible service implementation that will pass this test.
+
+        Enusre:
+        - All edge cases are covered
+        - Return types and value match expectations
+        - Use correct imports and exception handling.
+        - Return only Python code. No Explanation.
+
+        This code should be placed in 'app/services/ and should work standalone.
         """
 
-        impl_code=call_groq(prompt)
+        code=call_groq(prompt)
 
-        service_filename=filename.replace("test_","").replace(".py","_service.py")
-        service_path= os.path.join(service_folder, service_filename)
-        with open(service_path, "w") as f:
-            f.write(impl_code)
+        for attempt in range(MAX_RETRIES+1):
+            with open(service_path, "w") as f:
+                f.write(code)
+
+            success, output = run_pytest(project_path)
+            if success:
+                print(f"Tests passed on attempt {attempt+1}")
+                break
+
+            print(f"Test failed on {attempt+1}")
+            code= fix_code_with_groq(test_code,output,code)

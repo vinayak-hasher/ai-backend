@@ -1,43 +1,46 @@
 ```
-import pytest
-from your_module import recommend_colleague
+def test_employee_can_view_assigned_pod():
+    # Setup
+    employee = EmployeeFactory.create()
+    pod = PodFactory.create(employees=[employee])
 
-def test_recommend_colleague_success():
-    employee = {"id": 1, "name": "John Doe"}
-    colleague = {"id": 2, "name": "Jane Doe"}
-    pod = {"id": 1, "name": "Pod 1"}
-    assert recommend_colleague(employee, colleague, pod) == {"message": "Colleague recommended successfully"}
+    # Act
+    viewable_pods = employee.viewable_pods
 
-def test_recommend_colleague_employee_not_found():
-    employee = {"id": 1, "name": "John Doe"}
-    colleague = {"id": 2, "name": "Jane Doe"}
-    pod = {"id": 1, "name": "Pod 1"}
-    with pytest.raises(ValueError):
-        recommend_colleague({"id": 3, "name": "Unknown Employee"}, colleague, pod)
+    # Assert
+    assert pod in viewable_pods
 
-def test_recommend_colleague_colleague_not_found():
-    employee = {"id": 1, "name": "John Doe"}
-    pod = {"id": 1, "name": "Pod 1"}
-    with pytest.raises(ValueError):
-        recommend_colleague(employee, {"id": 3, "name": "Unknown Colleague"}, pod)
+def test_employee_cannot_view_unassigned_pod():
+    # Setup
+    employee = EmployeeFactory.create()
+    pod = PodFactory.create()
 
-def test_recommend_colleague_pod_not_found():
-    employee = {"id": 1, "name": "John Doe"}
-    colleague = {"id": 2, "name": "Jane Doe"}
-    with pytest.raises(ValueError):
-        recommend_colleague(employee, colleague, {"id": 3, "name": "Unknown Pod"})
+    # Act
+    viewable_pods = employee.viewable_pods
 
-def test_recommend_colleague_same_employee_and_colleague():
-    employee = {"id": 1, "name": "John Doe"}
-    pod = {"id": 1, "name": "Pod 1"}
-    with pytest.raises(ValueError):
-        recommend_colleague(employee, employee, pod)
+    # Assert
+    assert pod not in viewable_pods
 
-def test_recommend_colleague_already_recommended():
-    employee = {"id": 1, "name": "John Doe"}
-    colleague = {"id": 2, "name": "Jane Doe"}
-    pod = {"id": 1, "name": "Pod 1"}
-    recommend_colleague(employee, colleague, pod)
-    with pytest.raises(ValueError):
-        recommend_colleague(employee, colleague, pod)
+def test_employee_can_view_multiple_assigned_pods():
+    # Setup
+    employee = EmployeeFactory.create()
+    pod1 = PodFactory.create(employees=[employee])
+    pod2 = PodFactory.create(employees=[employee])
+
+    # Act
+    viewable_pods = employee.viewable_pods
+
+    # Assert
+    assert pod1 in viewable_pods
+    assert pod2 in viewable_pods
+
+def test_employee_with_no_assigned_pods_returns_empty_list():
+    # Setup
+    employee = EmployeeFactory.create()
+
+    # Act
+    viewable_pods = employee.viewable_pods
+
+    # Assert
+    assert viewable_pods == []
 ```

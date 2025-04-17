@@ -1,17 +1,33 @@
 ```
 import pytest
-from your_module import apply_for_leave
+from leave_application.models import LeaveApplication
+from users.models import User
+from categories.models import Category
 
-@pytest.mark.parametrize("employee_id, leave_category, expected", [
-    (1, "annual", {"employee_id": 1, "leave_category": "annual", "status": "pending"}),
-    (2, "sick", {"employee_id": 2, "leave_category": "sick", "status": "pending"}),
-    (3, "maternity", {"employee_id": 3, "leave_category": "maternity", "status": "pending"}),
-    (4, "paternity", {"employee_id": 4, "leave_category": "paternity", "status": "pending"}),
-    (5, None, {"error": "Leave category is required"}),
-    (6, "", {"error": "Leave category is required"}),
-    (7, "unknown", {"error": "Invalid leave category"}),
-])
-def test_apply_for_leave(employee_id, leave_category, expected):
-    result = apply_for_leave(employee_id, leave_category)
-    assert result == expected
+@pytest.fixture
+def user():
+    return User.objects.create_user(username='testuser', email='test@example.com', password='password')
+
+@pytest.fixture
+def category():
+    return Category.objects.create(name='Annual Leave')
+
+def test_apply_leave_with_category(user, category):
+    leave_application = LeaveApplication.objects.create(user=user, category=category, start_date='2023-01-01', end_date='2023-01-05')
+    assert leave_application.user == user
+    assert leave_application.category == category
+    assert leave_application.start_date == '2023-01-01'
+    assert leave_application.end_date == '2023-01-05'
+
+def test_apply_leave_without_category(user):
+    with pytest.raises(ValueError):
+        LeaveApplication.objects.create(user=user, start_date='2023-01-01', end_date='2023-01-05')
+
+def test_apply_leave_with_invalid_category(user):
+    with pytest.raises(ValueError):
+        LeaveApplication.objects.create(user=user, category='Invalid Category', start_date='2023-01-01', end_date='2023-01-05')
+
+def test_apply_leave_with_invalid_dates(user, category):
+    with pytest.raises(ValueError):
+        LeaveApplication.objects.create(user=user, category=category, start_date='2023-01-05', end_date='2023-01-01')
 ```
