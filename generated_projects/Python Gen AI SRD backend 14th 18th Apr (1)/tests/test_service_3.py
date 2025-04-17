@@ -1,20 +1,17 @@
 ```
 import pytest
 from django.contrib.auth.models import User
-from leave_management.models import LeaveRequest
-from leave_management.views import view_leave_requests
+from leave_request.models import LeaveRequest
 
 @pytest.mark.django_db
-def test_view_leave_requests():
-    user = User.objects.create_user(username='test_user', password='password')
+def test_user_can_view_their_leave_requests():
+    user = User.objects.create_user('test_user', 'test@example.com', 'password123')
     leave_request1 = LeaveRequest.objects.create(user=user, status='granted')
     leave_request2 = LeaveRequest.objects.create(user=user, status='pending')
-    leave_request3 = LeaveRequest.objects.create(user=User.objects.create_user(username='other_user', password='password'), status='granted')
+    leave_request3 = LeaveRequest.objects.create(user=User.objects.create_user('another_user', 'another@example.com', 'password123'), status='granted')
 
-    response = view_leave_requests(user)
-
-    assert len(response) == 2
-    assert leave_request1 in response
-    assert leave_request2 in response
-    assert leave_request3 not in response
+    assert user.leave_request_set.filter(status__in=['granted', 'pending']).count() == 2
+    assert user.leave_request_set.filter(status='granted').first() == leave_request1
+    assert user.leave_request_set.filter(status='pending').first() == leave_request2
+    assert leave_request3 not in user.leave_request_set.all()
 ```

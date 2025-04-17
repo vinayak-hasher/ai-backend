@@ -1,41 +1,31 @@
 ```
-import pytest
-from your_module import assign_employee_to_pod
+def test_assign_employee_to_pod():
+    manager = Manager()
+    employee = Employee()
+    pod = Pod()
 
-@pytest.fixture
-def manager():
-    return Manager()
-
-@pytest.fixture
-def employee():
-    return Employee()
-
-@pytest.fixture
-def pod():
-    return Pod()
-
-def test_assign_employee_to_pod(manager, employee, pod):
-    assign_employee_to_pod(manager, employee, pod)
+    # Happy path
+    manager.assign_employee_to_pod(employee, pod)
     assert employee.pod == pod
-    assert employee in pod.employees
+    assert pod.employees == [employee]
 
-def test_assign_employee_to_pod_twice(manager, employee, pod):
-    assign_employee_to_pod(manager, employee, pod)
+    # Edge case: Assign same employee to same pod
+    manager.assign_employee_to_pod(employee, pod)
+    assert employee.pod == pod
+    assert len(pod.employees) == 1
+
+    # Edge case: Assign same employee to different pod
+    new_pod = Pod()
+    manager.assign_employee_to_pod(employee, new_pod)
+    assert employee.pod == new_pod
+    assert len(new_pod.employees) == 1
+    assert pod.employees == []
+
+    # Edge case: Assign None employee
     with pytest.raises(ValueError):
-        assign_employee_to_pod(manager, employee, pod)
+        manager.assign_employee_to_pod(None, pod)
 
-def test_assign_employee_to_different_pod(manager, employee, pod, another_pod):
-    assign_employee_to_pod(manager, employee, pod)
-    assign_employee_to_pod(manager, employee, another_pod)
-    assert employee.pod == another_pod
-    assert employee not in pod.employees
-    assert employee in another_pod.employees
-
-def test_assign_employee_without_manager(employee, pod):
+    # Edge case: Assign None pod
     with pytest.raises(ValueError):
-        assign_employee_to_pod(None, employee, pod)
-
-def test_assign_employee_without_pod(manager, employee):
-    with pytest.raises(ValueError):
-        assign_employee_to_pod(manager, employee, None)
+        manager.assign_employee_to_pod(employee, None)
 ```

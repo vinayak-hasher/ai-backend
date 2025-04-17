@@ -4,6 +4,7 @@ from app.langgraph_nodes.srs_analysis import analyze_srs_content
 from app.langgraph_nodes.project_generator import generate_fastapi_project
 from app.langgraph_nodes.test_generator import generate_unit_tests
 from app.langgraph_nodes.code_generator import generate_code_from_tests
+from app.utils.zipper import zip_project
 import os
 import json
 
@@ -19,7 +20,6 @@ async def upload_srs_and_generate(file: UploadFile = File(...)):
     with open(file_path, "wb") as f:
         f.write(await file.read())
 
-    # STEP 1: Parse and analyze the SRS
     srs_text = extract_text_from_docx(file_path)
     # raw_result = analyze_srs_content(srs_text)
 
@@ -30,7 +30,6 @@ async def upload_srs_and_generate(file: UploadFile = File(...)):
 
     analysis_result=analyze_srs_content(srs_text)
 
-    # STEP 2: Feed analysis into Milestone 2 generator
     project_name = file.filename.replace(".docx", "")
     generation_message = generate_fastapi_project(project_name, analysis_result)
 
@@ -39,8 +38,11 @@ async def upload_srs_and_generate(file: UploadFile = File(...)):
 
     generate_code_from_tests(project_path)
 
+    zip_path=zip_project(project_path)
+
     return {
         "message": generation_message,
         "project_path": f"generated_projects/{project_name}",
+        "zip_path":zip_path,
         "analysis": analysis_result
     }

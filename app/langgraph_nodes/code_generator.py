@@ -8,7 +8,9 @@ def generate_code_from_tests(project_path: str):
     service_folder=os.path.join(project_path,"app","services")
     os.makedirs(service_folder,exist_ok=True)
 
-    for filename in os.listdir(test_folder):
+    for idx,filename in enumerate(test_folder):
+        if idx>=1:
+            break
         if not filename.startswith("test_") or not filename.endswith(".py"):
             continue
         
@@ -48,5 +50,5 @@ def generate_code_from_tests(project_path: str):
                 print(f"Tests passed on attempt {attempt+1}")
                 break
 
-            print(f"Test failed on {attempt+1}")
+            print(f"Test failed on attempt {attempt+1}")
             code= fix_code_with_groq(test_code,output,code)

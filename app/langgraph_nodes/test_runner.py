@@ -2,7 +2,7 @@ import subprocess
 import os
 from app.langgraph_nodes.test_generator import call_groq
 
-MAX_RETRIES=2
+MAX_RETRIES=0
 
 def run_pytest(project_path: str) -> tuple[bool,str]:
     result=subprocess.run(

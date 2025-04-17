@@ -9,17 +9,15 @@ from your_module import get_team_leave_history
     (None, False),
 ])
 def test_get_team_leave_history(user_role, expected):
-    # Assume get_user_role function returns the user's role
-    def get_user_role():
-        return user_role
-
-    result = get_team_leave_history(get_user_role)
+    user = {"role": user_role}
+    result = get_team_leave_history(user)
     assert result == expected
 
-def test_get_team_leave_history_no_user_role():
-    def get_user_role():
-        return None
+def test_get_team_leave_history_no_user():
+    result = get_team_leave_history(None)
+    assert result == False
 
-    with pytest.raises(ValueError):
-        get_team_leave_history(get_user_role)
+def test_get_team_leave_history_empty_user():
+    result = get_team_leave_history({})
+    assert result == False
 ```
