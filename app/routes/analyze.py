@@ -17,7 +17,6 @@ async def upload_srs_and_generate(file: UploadFile = File(...)):
     with open(file_path, "wb") as f:
         f.write(await file.read())
 
-    # STEP 1: Parse and analyze the SRS
     srs_text = extract_text_from_docx(file_path)
     raw_result = analyze_srs_content(srs_text)
 
@@ -28,7 +27,6 @@ async def upload_srs_and_generate(file: UploadFile = File(...)):
 
     analysis_result=analyze_srs_content(srs_text)
 
-    # STEP 2: Feed analysis into Milestone 2 generator
     project_name = file.filename.replace(".docx", "")
     generation_message = generate_fastapi_project(project_name, analysis_result)
 
