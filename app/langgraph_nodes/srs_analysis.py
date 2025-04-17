@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 API_KEY=os.getenv("GROQ_API_KEY")
-print("GROQ: ", os.getenv("GROQ_API_KEY"))
+# print("GROQ: ", os.getenv("GROQ_API_KEY"))
 MODEL_NAME="llama3-70b-8192"
 
 def get_groq_response(prompt: str)->str:
