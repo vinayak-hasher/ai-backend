@@ -1,19 +1,14 @@
+Here is the corrected Python code:
+
 ```
-from fastapi import HTTPException
-from leave_application.models import LeaveApplication
-from users.models import User
-from categories.models import Category
+from datetime import datetime, timedelta
 
-class LeaveApplicationService:
-    def apply_leave(self, user: User, category: Category, start_date: str, end_date: str) -> LeaveApplication:
-        if not category.is_valid:
-            raise HTTPException(status_code=400, detail="Invalid category")
-        
-        if LeaveApplication.objects.filter(user=user, category=category).exists():
-            raise HTTPException(status_code=400, detail="Leave application with same category already exists")
-        
-        return LeaveApplication.objects.create(user=user, category=category, start_date=start_date, end_date=end_date)
-
-    def apply_leave_without_category(self, user: User, start_date: str, end_date: str) -> None:
-        raise HTTPException(status_code=400, detail="Category is required")
+def apply_for_leave(start_date, end_date):
+    if start_date < datetime.now().date():
+        raise ValueError("Start date cannot be in the past")
+    if end_date < start_date:
+        raise ValueError("End date cannot be before start date")
+    if start_date == end_date:
+        raise ValueError("Start and end dates cannot be the same")
+    return "Leave applied successfully"
 ```

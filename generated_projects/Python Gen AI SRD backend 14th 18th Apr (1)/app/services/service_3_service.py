@@ -1,30 +1,26 @@
+Here is the corrected code:
+
 ```
 from fastapi import Depends
-from fastapi.responses import JSONResponse
-from fastapi.requests import Request
-from fastapi.security.utils import get_authorization_scheme_param
-from fastapi.security.oauth2 import OAuth2PasswordBearer
-from fastapi.security.base import SecurityBase
-from fastapi import FastAPI
-from typing import List
-from django.contrib.auth.models import User
-from leave_management.models import LeaveRequest
+from sqlalchemy.orm import Session
+from your_app.models import User, Pod
+from your_app.database import get_db
 
-app = FastAPI()
+class PodService:
+    def __init__(self, db: Session = Depends(get_db)):
+        self.db = db
 
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
+    def assign_pod_to_user(self, user: User, pod: Pod):
+        user.pod = pod
+        self.db.add(user)
+        self.db.commit()
 
-async def get_current_user(token: str = Depends(oauth2_scheme)):
-    user = User.objects.get(username=token)
-    return user
-
-@app.get("/leave_requests/")
-async def read_leave_requests(user: User = Depends(get_current_user)):
-    leave_requests = user.leave_requests.all()
-    return [{"id": lr.id, "status": lr.status} for lr in leave_requests]
-
-@app.get("/leave_requests/{status}")
-async def read_leave_requests_by_status(status: str, user: User = Depends(get_current_user)):
-    leave_requests = user.leave_requests.filter(status=status)
-    return [{"id": lr.id, "status": lr.status} for lr in leave_requests]
+    def recommend_colleagues_for_pod(self, user: User, pod: Pod, colleague: User):
+        if user.pod != pod:
+            raise ValueError("User is not assigned to this pod")
+        if user.pod is None:
+            raise ValueError("User is not assigned to any pod")
+        pod.recommended_colleagues.add(colleague)
+        self.db.add(pod)
+        self.db.commit()
 ```

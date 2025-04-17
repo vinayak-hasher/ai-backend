@@ -1,32 +1,33 @@
 ```
 import pytest
-from leave_application.models import LeaveApplication
-from users.models import User
-from categories.models import Category
+from datetime import datetime, timedelta
+from your_module import apply_for_leave  # replace with your actual module
 
-@pytest.fixture
-def user():
-    return User.objects.create_user(username='testuser', email='test@example.com', password='password')
+def test_apply_for_leave_valid_dates():
+    start_date = datetime.now().date()
+    end_date = start_date + timedelta(days=5)
+    assert apply_for_leave(start_date, end_date) == "Leave applied successfully"
 
-@pytest.fixture
-def category():
-    return Category.objects.create(name='Annual Leave')
-
-def test_apply_leave_with_category(user, category):
-    leave_application = LeaveApplication.objects.create(user=user, category=category, start_date='2022-01-01', end_date='2022-01-05')
-    assert leave_application.category == category
-
-def test_apply_leave_without_category(user):
+def test_apply_for_leave_invalid_start_date():
+    start_date = datetime.now().date() - timedelta(days=5)
+    end_date = datetime.now().date() + timedelta(days=5)
     with pytest.raises(ValueError):
-        LeaveApplication.objects.create(user=user, start_date='2022-01-01', end_date='2022-01-05')
+        apply_for_leave(start_date, end_date)
 
-def test_apply_leave_with_invalid_category(user):
-    invalid_category = Category.objects.create(name='Invalid Category')
+def test_apply_for_leave_invalid_end_date():
+    start_date = datetime.now().date()
+    end_date = start_date - timedelta(days=5)
     with pytest.raises(ValueError):
-        LeaveApplication.objects.create(user=user, category=invalid_category, start_date='2022-01-01', end_date='2022-01-05')
+        apply_for_leave(start_date, end_date)
 
-def test_apply_leave_with_same_category_twice(user, category):
-    LeaveApplication.objects.create(user=user, category=category, start_date='2022-01-01', end_date='2022-01-05')
+def test_apply_for_leave_same_dates():
+    date = datetime.now().date()
     with pytest.raises(ValueError):
-        LeaveApplication.objects.create(user=user, category=category, start_date='2022-01-06', end_date='2022-01-10')
+        apply_for_leave(date, date)
+
+def test_apply_for_leave_start_date_greater_than_end_date():
+    start_date = datetime.now().date() + timedelta(days=5)
+    end_date = datetime.now().date()
+    with pytest.raises(ValueError):
+        apply_for_leave(start_date, end_date)
 ```

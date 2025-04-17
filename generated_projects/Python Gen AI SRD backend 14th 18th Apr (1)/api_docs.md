@@ -25,7 +25,7 @@
 
 ---
 ### `POST /api/pods/{pod_id}/recommend`
-- **Description:** Recommend Employee for Pod
+- **Description:** Recommend an Employee for a Pod
 
 ---
 ### `POST /api/auth/login`

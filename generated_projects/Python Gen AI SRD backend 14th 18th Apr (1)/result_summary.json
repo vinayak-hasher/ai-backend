@@ -35,7 +35,7 @@
       {
         "method": "POST",
         "path": "/api/pods/{pod_id}/recommend",
-        "description": "Recommend Employee for Pod"
+        "description": "Recommend an Employee for a Pod"
       },
       {
         "method": "POST",
@@ -53,95 +53,133 @@
         {
           "name": "leaves",
           "columns": [
-            "id",
-            "start_date",
-            "end_date",
-            "reason",
-            "status",
-            "user_id"
+            {
+              "name": "id",
+              "type": "integer",
+              "primary_key": true
+            },
+            {
+              "name": "start_date",
+              "type": "date"
+            },
+            {
+              "name": "end_date",
+              "type": "date"
+            },
+            {
+              "name": "reason",
+              "type": "string"
+            },
+            {
+              "name": "status",
+              "type": "string"
+            }
           ]
         },
         {
           "name": "pods",
           "columns": [
-            "id",
-            "name",
-            "members"
+            {
+              "name": "id",
+              "type": "integer",
+              "primary_key": true
+            },
+            {
+              "name": "name",
+              "type": "string"
+            }
           ]
         },
         {
           "name": "pod_members",
           "columns": [
-            "id",
-            "pod_id",
-            "user_id",
-            "role"
+            {
+              "name": "id",
+              "type": "integer",
+              "primary_key": true
+            },
+            {
+              "name": "pod_id",
+              "type": "integer",
+              "foreign_key": true
+            },
+            {
+              "name": "user_id",
+              "type": "integer",
+              "foreign_key": true
+            }
           ]
         },
         {
           "name": "users",
           "columns": [
-            "id",
-            "email",
-            "password",
-            "role"
+            {
+              "name": "id",
+              "type": "integer",
+              "primary_key": true
+            },
+            {
+              "name": "email",
+              "type": "string"
+            },
+            {
+              "name": "password",
+              "type": "string"
+            },
+            {
+              "name": "role",
+              "type": "string"
+            }
           ]
         }
       ],
       "relationships": [
         {
-          "table1": "leaves",
-          "table2": "users",
-          "relationship": "one-to-one",
-          "foreign_key": "user_id"
+          "table": "leaves",
+          "column": "id",
+          "references": "users"
         },
         {
-          "table1": "pods",
-          "table2": "pod_members",
-          "relationship": "one-to-many",
-          "foreign_key": "pod_id"
+          "table": "pod_members",
+          "column": "id",
+          "references": "pods"
         },
         {
-          "table1": "pod_members",
-          "table2": "users",
-          "relationship": "many-to-one",
-          "foreign_key": "user_id"
+          "table": "pod_members",
+          "column": "id",
+          "references": "users"
         }
       ]
     },
     "business_rules": [
-      "A user can apply for leave with a specific category.",
-      "A manager can approve or reject a leave request with comments.",
-      "A user can view their granted and pending leave requests.",
-      "A manager can access reports of team leave history.",
+      "A user can apply for leave with a valid start and end date.",
+      "A manager can approve or reject a leave request with a comment.",
+      "A user can view their assigned pod and recommend colleagues for inclusion.",
       "A manager can assign employees to specific pods.",
-      "An employee can view their assigned pod.",
-      "An employee can recommend colleagues for inclusion in a pod."
+      "The system enforces Role-Based Access Control (RBAC) for API access."
     ],
     "auth_requirements": {
       "roles": [
-        "general_user",
-        "manager"
+        "manager",
+        "employee"
       ],
       "login_mechanisms": [
-        "email_password"
+        "email",
+        "password"
       ],
       "rbac": {
-        "general_user": [
-          "apply_for_leave",
-          "view_leave_status",
-          "view_assigned_pod"
-        ],
         "manager": [
-          "approve_reject_leave",
-          "access_leave_reports",
-          "assign_employees_to_pods"
+          "lms",
+          "pods"
+        ],
+        "employee": [
+          "lms"
         ]
       }
     }
   },
   "zip_path": "generated_projects/Python Gen AI SRD backend 14th 18th Apr (1).zip",
-  "test_count": 8,
-  "service_count": 7,
+  "test_count": 6,
+  "service_count": 5,
   "status": "success"
 }

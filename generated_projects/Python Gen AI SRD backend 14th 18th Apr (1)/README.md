@@ -31,13 +31,12 @@ uvicorn main:app --reload
 ```
 .
 app
-__init__.py
 main.py
 models
 __init__.py
 user.py
-leave.py
 pod.py
+leave.py
 ...
 routers
 __init__.py
@@ -49,12 +48,8 @@ auth.py
 schemas
 __init__.py
 user.py
-leave.py
 pod.py
-...
-utils
-__init__.py
-auth_utils.py
+leave.py
 ...
 tests
 __init__.py
@@ -85,29 +80,30 @@ README.md
 
 * `POST /api/pods/assign`: Assign Employee to Pod
 * `GET /api/pods/{pod_id}/details`: Get Pod Details
-* `POST /api/pods/{pod_id}/recommend`: Recommend Employee for Pod
+* `POST /api/pods/{pod_id}/recommend`: Recommend an Employee for a Pod
 
 ### Authentication
 
 * `POST /api/auth/login`: User Login
 * `GET /api/auth/user`: Fetch Current User Details
 
-**Authentication Info**
------------------------
+**Business Logic Rules**
+-------------------------
 
-### Roles
+* A user can apply for leave with a valid start and end date.
+* A manager can approve or reject a leave request with a comment.
+* A user can view their assigned pod and recommend colleagues for inclusion.
+* A manager can assign employees to specific pods.
+* The system enforces Role-Based Access Control (RBAC) for API access.
 
-* `general_user`
-* `manager`
+**Auth System**
+-------------
 
-### Login Mechanisms
-
-* `email_password`
-
-### Role-Based Access Control (RBAC)
-
-* `general_user`: `apply_for_leave`, `view_leave_status`, `view_assigned_pod`
-* `manager`: `approve_reject_leave`, `access_leave_reports`, `assign_employees_to_pods`
+* Roles: `manager`, `employee`
+* Login Mechanisms: `email`, `password`
+* RBAC:
+	+ `manager`: `lms`, `pods`
+	+ `employee`: `lms`
 
 **Testing Instructions**
 -----------------------
@@ -118,7 +114,7 @@ README.md
 pytest
 ```
 
-### Coverage report
+### Run tests with coverage
 
 ```
 pytest --cov=app

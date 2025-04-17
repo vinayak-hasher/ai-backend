@@ -1,17 +1,32 @@
 ```
 import pytest
-from django.contrib.auth.models import User
-from leave_management.models import LeaveRequest
+from your_app.models import User, Pod
 
-@pytest.mark.django_db
-def test_user_can_view_their_leave_requests():
-    user = User.objects.create_user('test_user', 'test@example.com', 'password123')
-    leave_request1 = LeaveRequest.objects.create(user=user, status='granted')
-    leave_request2 = LeaveRequest.objects.create(user=user, status='pending')
-    leave_request3 = LeaveRequest.objects.create(user=User.objects.create_user('other_user', 'other@example.com', 'password123'), status='granted')
+@pytest.fixture
+def user():
+    return User.objects.create(username='test_user')
 
-    assert user.leave_requests.count() == 2
-    assert user.leave_requests.filter(status='granted').count() == 1
-    assert user.leave_requests.filter(status='pending').count() == 1
-    assert leave_request3 not in user.leave_requests.all()
+@pytest.fixture
+def pod():
+    return Pod.objects.create(name='test_pod')
+
+def test_user_can_view_assigned_pod(user, pod):
+    user.pod = pod
+    user.save()
+    assert user.pod == pod
+
+def test_user_cannot_view_unassigned_pod(user, pod):
+    assert user.pod is None
+
+def test_user_can_recommend_colleagues_for_inclusion(user, pod):
+    colleague = User.objects.create(username='test_colleague')
+    user.pod = pod
+    user.save()
+    pod.recommended_colleagues.add(colleague)
+    assert colleague in pod.recommended_colleagues.all()
+
+def test_user_cannot_recommend_colleagues_for_unassigned_pod(user, pod):
+    colleague = User.objects.create(username='test_colleague')
+    with pytest.raises(ValueError):
+        pod.recommended_colleagues.add(colleague)
 ```

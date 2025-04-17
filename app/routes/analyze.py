@@ -8,6 +8,7 @@ from app.langgraph_nodes.code_generator import generate_code_from_tests
 from app.utils.zipper import zip_project
 from app.langgraph_nodes.documenter import generate_readme,generate_api_docs,generate_mermaid_flow
 from app.utils.result_logger import save_result_summary
+from app.utils.langsmith_exporter import save_langsmith_trace
 import os
 import json
 
@@ -51,6 +52,8 @@ async def upload_srs_and_generate(file: UploadFile = File(...)):
     }
 
     save_result_summary(project_path,summary_data)
+
+    save_langsmith_trace(project_path)
 
     return FileResponse(zip_path,filename=f"{project_name}.zip", media_type="application/zip")
 

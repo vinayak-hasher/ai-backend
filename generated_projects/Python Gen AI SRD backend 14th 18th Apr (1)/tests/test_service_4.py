@@ -1,23 +1,28 @@
 ```
 import pytest
-from your_module import get_team_leave_history
+from your_module import assign_employee_to_pod
 
-@pytest.mark.parametrize("user_role, expected", [
-    ("manager", True),
-    ("team_member", False),
-    ("admin", False),
-    (None, False),
-])
-def test_get_team_leave_history(user_role, expected):
-    # assuming get_team_leave_history function takes user_role as an argument
-    result = get_team_leave_history(user_role)
-    assert result == expected
+def test_assign_employee_to_pod_success():
+    manager = "John Doe"
+    employee = "Jane Doe"
+    pod = "Pod 1"
+    assert assign_employee_to_pod(manager, employee, pod) == f"{employee} assigned to {pod} by {manager}"
 
-def test_get_team_leave_history_with_invalid_input():
+def test_assign_employee_to_pod_no_manager():
+    employee = "Jane Doe"
+    pod = "Pod 1"
     with pytest.raises(ValueError):
-        get_team_leave_history("invalid_role")
+        assign_employee_to_pod(None, employee, pod)
 
-def test_get_team_leave_history_with_no_input():
-    with pytest.raises(TypeError):
-        get_team_leave_history()
+def test_assign_employee_to_pod_no_employee():
+    manager = "John Doe"
+    pod = "Pod 1"
+    with pytest.raises(ValueError):
+        assign_employee_to_pod(manager, None, pod)
+
+def test_assign_employee_to_pod_no_pod():
+    manager = "John Doe"
+    employee = "Jane Doe"
+    with pytest.raises(ValueError):
+        assign_employee_to_pod(manager, employee, None)
 ```
