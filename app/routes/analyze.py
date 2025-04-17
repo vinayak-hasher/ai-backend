@@ -3,6 +3,7 @@ from app.utils.docx_parser import extract_text_from_docx
 from app.langgraph_nodes.srs_analysis import analyze_srs_content
 from app.langgraph_nodes.project_generator import generate_fastapi_project
 from app.langgraph_nodes.test_generator import generate_unit_tests
+from app.langgraph_nodes.code_generator import generate_code_from_tests
 import os
 import json
 
@@ -35,6 +36,8 @@ async def upload_srs_and_generate(file: UploadFile = File(...)):
 
     project_path=f"generated_projects/{project_name}"
     generate_unit_tests(project_path,analysis_result)
+
+    generate_code_from_tests(project_path)
 
     return {
         "message": generation_message,
