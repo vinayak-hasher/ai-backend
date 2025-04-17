@@ -5,6 +5,7 @@ from app.langgraph_nodes.project_generator import generate_fastapi_project
 from app.langgraph_nodes.test_generator import generate_unit_tests
 from app.langgraph_nodes.code_generator import generate_code_from_tests
 from app.utils.zipper import zip_project
+from app.langgraph_nodes.documenter import generate_readme,generate_api_docs,generate_mermaid_flow
 import os
 import json
 
@@ -39,6 +40,12 @@ async def upload_srs_and_generate(file: UploadFile = File(...)):
     generate_code_from_tests(project_path)
 
     zip_path=zip_project(project_path)
+
+    generate_readme(project_path,analysis_result)
+
+    generate_api_docs(project_path,analysis_result)
+
+    generate_mermaid_flow(project_path)
 
     return {
         "message": generation_message,
