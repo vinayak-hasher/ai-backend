@@ -2,6 +2,7 @@ import os
 from app.langgraph_nodes.test_generator import call_groq
 from app.langgraph_nodes.test_runner import run_pytest, fix_code_with_groq,MAX_RETRIES
 from app.langgraph_nodes.langsmith_logger import log_fix_attempt
+from app.utils.cleaner import clean_code_block
 import time
 
 def generate_code_from_tests(project_path: str):
@@ -42,6 +43,7 @@ def generate_code_from_tests(project_path: str):
         """
 
         code=call_groq(prompt)
+        code=clean_code_block(code)
         # print("groq code: ", code[:100])
 
         for attempt in range(MAX_RETRIES+1):
@@ -54,5 +56,7 @@ def generate_code_from_tests(project_path: str):
                 break
 
             print(f"Test failed on attempt {attempt+1}")
+            print("Error O/p: ", output)
             code= fix_code_with_groq(test_code,output,code)
             code= log_fix_attempt(attempt+1,output,code)
+            

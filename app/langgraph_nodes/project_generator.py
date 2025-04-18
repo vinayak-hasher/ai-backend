@@ -1,5 +1,6 @@
 import os
 import shutil
+import subprocess
 
 PROJECT_BASE = "generated_projects"
 
@@ -116,3 +117,10 @@ def write_models(schema, base_path):
         content += "\n"
 
     write_file(model_file, content)
+
+    def init_alembic(project_path: str):
+        alembic_dir= os.path.join(project_path,"alembic")
+        if os.path.exists(alembic_dir):
+            return 
+        
+        subprocess.run(["alembic","init","alembic"], cwd=project_path)
