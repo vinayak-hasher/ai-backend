@@ -1,14 +1,19 @@
-Here is the corrected Python code:
+from django.core.exceptions import ValidationError
 
-```
-def apply_for_leave(reason: str, start_date: datetime, end_date: datetime):
-    if not reason.strip():  # Check if reason is empty or contains only whitespace
-        raise ValueError("Reason cannot be empty")
-    if start_date < datetime.now():
-        raise ValueError("Start date cannot be in the past")
-    if end_date < start_date:
-        raise ValueError("End date cannot be before start date")
-    if start_date == end_date:
-        raise ValueError("Start and end dates cannot be the same")
-    return "Leave applied successfully"
-```
+class LeaveApplication(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    category = models.ForeignKey(LeaveCategory, on_delete=models.CASCADE)
+    start_date = models.DateField()
+    end_date = models.DateField()
+
+    def clean(self):
+        if self.user is None:
+            raise ValidationError("User cannot be null")
+        if self.category is None:
+            raise ValidationError("Category cannot be null")
+        if self.start_date > self.end_date:
+            raise ValidationError("Start date cannot be after end date")
+
+    def save(self, *args, **kwargs):
+        self.clean()
+        super(LeaveApplication, self).save(*args, **kwargs)

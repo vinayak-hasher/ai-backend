@@ -1,8 +1,9 @@
 import os
 import httpx
-import time
+import time 
 from dotenv import load_dotenv
 from app.langgraph_nodes.langsmith_logger import log_test_generation
+from app.utils.cleaner import clean_code_block
 load_dotenv()
 
 API_KEYS=[os.getenv("GROQ_API_KEY"),os.getenv("GROQ_API_KEY_2")]
@@ -22,14 +23,14 @@ def call_groq(prompt:str, max_retries=3):
                 "content": prompt
             }
         ],
-        "temperature":0.2
+        "temperature":0
     }
 
     for key in API_KEYS:
         for attempt in range(max_retries):
             try:
                 headers={"Authorization":f"Bearer {key}","Content-Type": "application/json"}
-                response= httpx.post(url,headers=headers,json=body)
+                response= httpx.post(url,headers=headers,json=body,timeout=httpx.Timeout(5))
                 response.raise_for_status()
                 output= response.json()["choices"][0]["message"]["content"]
                 time.sleep(5)
@@ -52,7 +53,7 @@ def generate_unit_tests(project_path: str, analysis: dict):
 
     for idx, rule in enumerate(services):
         prompt= f"""
-        Based on the following business rule, generate a pytest-style unit test with proper assertions and edge cases.filter
+        Based on the following business rule, generate a pytest-style unit test with proper assertions and edge cases.
 
         Rule: {rule}
 
@@ -60,6 +61,7 @@ def generate_unit_tests(project_path: str, analysis: dict):
         """
 
         test_code=call_groq(prompt)
+        test_code=clean_code_block(test_code)
 
         test_code= log_test_generation(rule,test_code)
 

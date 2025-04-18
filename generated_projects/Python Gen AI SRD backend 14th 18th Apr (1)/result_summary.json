@@ -53,125 +53,88 @@
         {
           "name": "leaves",
           "columns": [
-            {
-              "name": "id",
-              "type": "integer",
-              "primary_key": true
-            },
-            {
-              "name": "start_date",
-              "type": "date"
-            },
-            {
-              "name": "end_date",
-              "type": "date"
-            },
-            {
-              "name": "reason",
-              "type": "string"
-            },
-            {
-              "name": "status",
-              "type": "string"
-            }
+            "id",
+            "start_date",
+            "end_date",
+            "reason",
+            "status"
           ]
         },
         {
           "name": "pods",
           "columns": [
-            {
-              "name": "id",
-              "type": "integer",
-              "primary_key": true
-            },
-            {
-              "name": "name",
-              "type": "string"
-            }
+            "id",
+            "name",
+            "members"
           ]
         },
         {
           "name": "pod_members",
           "columns": [
-            {
-              "name": "id",
-              "type": "integer",
-              "primary_key": true
-            },
-            {
-              "name": "pod_id",
-              "type": "integer",
-              "foreign_key": true
-            },
-            {
-              "name": "user_id",
-              "type": "integer",
-              "foreign_key": true
-            }
+            "id",
+            "pod_id",
+            "user_id",
+            "role"
           ]
         },
         {
           "name": "users",
           "columns": [
-            {
-              "name": "id",
-              "type": "integer",
-              "primary_key": true
-            },
-            {
-              "name": "email",
-              "type": "string"
-            },
-            {
-              "name": "password",
-              "type": "string"
-            },
-            {
-              "name": "role",
-              "type": "string"
-            }
+            "id",
+            "email",
+            "password",
+            "role"
           ]
         }
       ],
       "relationships": [
         {
-          "table": "leaves",
-          "column": "user_id",
-          "references": "users"
+          "table1": "leaves",
+          "table2": "users",
+          "relationship": "one-to-one"
         },
         {
-          "table": "pod_members",
-          "column": "pod_id",
-          "references": "pods"
+          "table1": "pods",
+          "table2": "pod_members",
+          "relationship": "one-to-many"
         },
         {
-          "table": "pod_members",
-          "column": "user_id",
-          "references": "users"
+          "table1": "pod_members",
+          "table2": "users",
+          "relationship": "many-to-one"
         }
       ]
     },
     "business_rules": [
-      "A user can apply for leave with a valid reason and dates.",
-      "A manager can approve or reject a leave request with a comment.",
-      "A user can view their assigned pod and recommend colleagues for inclusion.",
+      "A user can apply for leave with a specific category.",
+      "A manager can approve or reject a leave request with comments.",
       "A manager can assign employees to specific pods.",
-      "The system enforces Role-Based Access Control (RBAC) for all APIs."
+      "An employee can view assigned pod and recommend colleagues for inclusion."
     ],
     "auth_requirements": {
       "roles": [
-        "manager",
-        "employee"
+        "general_user",
+        "manager"
       ],
       "login_mechanisms": [
-        "email",
-        "password"
+        "email_password"
       ],
-      "rbac": true
+      "rbac": {
+        "general_user": [
+          "apply_for_leave",
+          "view_leave_status",
+          "view_assigned_pod"
+        ],
+        "manager": [
+          "approve_reject_leave",
+          "assign_employee_to_pod",
+          "view_pod_members"
+        ]
+      }
     }
   },
   "zip_path": "generated_projects/Python Gen AI SRD backend 14th 18th Apr (1).zip",
-  "test_count": 6,
-  "service_count": 5,
+  "test_count": 5,
+  "service_count": 4,
   "status": "success"
 }

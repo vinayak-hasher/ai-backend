@@ -1,28 +1,32 @@
-```
-def test_assign_employee_to_pod_success(manager, employee, pod):
-    # Arrange
-    manager.assign_employee_to_pod(employee, pod)
+import pytest
+from your_module import Employee, Pod
 
-    # Assert
-    assert employee in pod.employees
-    assert pod in employee.pods
+@pytest.fixture
+def employee():
+    return Employee("John Doe", "john.doe@example.com")
 
+@pytest.fixture
+def pod():
+    return Pod("Pod 1")
 
-def test_assign_employee_to_pod_already_assigned(manager, employee, pod):
-    # Arrange
-    manager.assign_employee_to_pod(employee, pod)
+def test_employee_can_view_assigned_pod(employee, pod):
+    employee.assign_pod(pod)
+    assert employee.view_assigned_pod() == pod
+
+def test_employee_cannot_view_unassigned_pod(employee):
+    assert employee.view_assigned_pod() is None
+
+def test_employee_can_recommend_colleague(employee):
+    colleague = Employee("Jane Doe", "jane.doe@example.com")
+    assert employee.recommend_colleague(colleague) == "Colleague recommended successfully"
+
+def test_employee_cannot_recommend_self(employee):
     with pytest.raises(ValueError):
-        manager.assign_employee_to_pod(employee, pod)
+        employee.recommend_colleague(employee)
 
-
-def test_assign_employee_to_pod_employee_none(manager, pod):
-    # Arrange
-    with pytest.raises(TypeError):
-        manager.assign_employee_to_pod(None, pod)
-
-
-def test_assign_employee_to_pod_pod_none(manager, employee):
-    # Arrange
-    with pytest.raises(TypeError):
-        manager.assign_employee_to_pod(employee, None)
-```
+def test_employee_cannot_recommend_colleague_without_pod(employee, pod):
+    colleague = Employee("Jane Doe", "jane.doe@example.com")
+    with pytest.raises(ValueError):
+        employee.recommend_colleague(colleague)
+    employee.assign_pod(pod)
+    assert employee.recommend_colleague(colleague) == "Colleague recommended successfully"

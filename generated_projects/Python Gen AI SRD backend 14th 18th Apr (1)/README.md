@@ -1,14 +1,13 @@
-**HRMS FastAPI Backend**
-==========================
+**HRMS Backend API**
+=====================
 
 **Tech Stack**
 -------------
 
-* Python 3.9+
-* FastAPI 0.70.0+
-* SQLAlchemy 1.4.25+
-* Pydantic 1.9.0+
-* Alembic 1.7.5+
+* FastAPI
+* Python 3.9
+* SQLAlchemy
+* PostgreSQL
 
 **Installation and Running**
 ---------------------------
@@ -22,22 +21,21 @@ pip install -r requirements.txt
 ### Run the application
 
 ```
-uvicorn main:app --reload
+uvicorn main:app --host 0.0.0.0 --port 8000
 ```
 
 **Folder Structure**
---------------------
+-------------------
 
 ```
 .
 app
-__init__.py
 main.py
 models
 __init__.py
 user.py
-pod.py
 leave.py
+pod.py
 ...
 routers
 __init__.py
@@ -49,12 +47,8 @@ auth.py
 schemas
 __init__.py
 user.py
-pod.py
 leave.py
-...
-utils
-__init__.py
-auth_utils.py
+pod.py
 ...
 tests
 __init__.py
@@ -64,12 +58,7 @@ test_pods.py
 test_auth.py
 ...
 requirements.txt
-alembic.ini
-alembic
-env.py
-script.py
-versions
-...
+README.md
 ```
 
 **API Endpoints**
@@ -79,7 +68,7 @@ versions
 
 * `GET /api/dashboard/tiles` - Fetch Dashboard Data
 
-### LMS
+### Leave Management System (LMS)
 
 * `POST /api/lms/leaves/apply` - Apply for Leave
 * `GET /api/lms/leaves/status` - Retrieve Leave Status
@@ -91,29 +80,30 @@ versions
 * `GET /api/pods/{pod_id}/details` - Get Pod Details
 * `POST /api/pods/{pod_id}/recommend` - Recommend an Employee for a Pod
 
-### Auth
+### Authentication
 
 * `POST /api/auth/login` - User Login
 * `GET /api/auth/user` - Fetch Current User Details
 
-**Business Logic Rules**
--------------------------
+**Authentication Info**
+---------------------
 
-* A user can apply for leave with a valid reason and dates.
-* A manager can approve or reject a leave request with a comment.
-* A user can view their assigned pod and recommend colleagues for inclusion.
-* A manager can assign employees to specific pods.
-* The system enforces Role-Based Access Control (RBAC) for all APIs.
+### Roles
 
-**Auth System**
-----------------
+* `general_user`
+* `manager`
 
-* Roles: `manager`, `employee`
-* Login Mechanisms: `email`, `password`
-* RBAC: Enabled
+### Login Mechanisms
+
+* `email_password`
+
+### Role-Based Access Control (RBAC)
+
+* `general_user`: `apply_for_leave`, `view_leave_status`, `view_assigned_pod`
+* `manager`: `approve_reject_leave`, `assign_employee_to_pod`, `view_pod_members`
 
 **Testing Instructions**
--------------------------
+----------------------
 
 ### Run tests
 
@@ -121,8 +111,15 @@ versions
 pytest
 ```
 
-### Run tests with coverage
+### Test Coverage
 
-```
-pytest --cov=app
-```
+* Unit tests for each API endpoint
+* Integration tests for business logic rules
+
+**Business Logic Rules**
+-----------------------
+
+* A user can apply for leave with a specific category.
+* A manager can approve or reject a leave request with comments.
+* A manager can assign employees to specific pods.
+* An employee can view assigned pod and recommend colleagues for inclusion.

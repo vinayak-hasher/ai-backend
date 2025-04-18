@@ -1,32 +1,41 @@
-```
-def test_view_assigned_pod_and_recommend_colleagues():
-    # Setup
-    user = UserFactory.create()
-    pod = PodFactory.create(assigned_to=user)
-    colleague1 = UserFactory.create()
-    colleague2 = UserFactory.create()
+import pytest
+from your_module import Manager, Employee, Pod
 
-    # Test viewing assigned pod
-    response = client.get(f'/pods/{pod.id}')
-    assert response.status_code == 200
-    assert response.json()['id'] == pod.id
+@pytest.fixture
+def manager():
+    return Manager("John Doe")
 
-    # Test recommending colleagues
-    response = client.post(f'/pods/{pod.id}/recommend', json={'user_ids': [colleague1.id, colleague2.id]})
-    assert response.status_code == 200
-    assert response.json()['recommended_colleagues'] == [colleague1.id, colleague2.id]
+@pytest.fixture
+def employee():
+    return Employee("Jane Doe")
 
-    # Edge case: user not assigned to pod
-    pod.assigned_to = None
-    pod.save()
-    response = client.get(f'/pods/{pod.id}')
-    assert response.status_code == 403
+@pytest.fixture
+def pod():
+    return Pod("Pod 1")
 
-    # Edge case: invalid pod id
-    response = client.get('/pods/99999')
-    assert response.status_code == 404
+def test_assign_employee_to_pod(manager, employee, pod):
+    manager.assign_employee_to_pod(employee, pod)
+    assert employee in pod.employees
+    assert pod in employee.pods
 
-    # Edge case: invalid user ids
-    response = client.post(f'/pods/{pod.id}/recommend', json={'user_ids': ['invalid', 123]})
-    assert response.status_code == 400
-```
+def test_assign_employee_to_pod_twice(manager, employee, pod):
+    manager.assign_employee_to_pod(employee, pod)
+    with pytest.raises(ValueError):
+        manager.assign_employee_to_pod(employee, pod)
+
+def test_assign_employee_to_different_pods(manager, employee, pod):
+    pod2 = Pod("Pod 2")
+    manager.assign_employee_to_pod(employee, pod)
+    manager.assign_employee_to_pod(employee, pod2)
+    assert employee in pod.employees
+    assert employee in pod2.employees
+    assert pod in employee.pods
+    assert pod2 in employee.pods
+
+def test_assign_none_employee_to_pod(manager, pod):
+    with pytest.raises(TypeError):
+        manager.assign_employee_to_pod(None, pod)
+
+def test_assign_employee_to_none_pod(manager, employee):
+    with pytest.raises(TypeError):
+        manager.assign_employee_to_pod(employee, None)

@@ -3,8 +3,9 @@ import os
 import re
 from app.langgraph_nodes.test_generator import call_groq
 from app.langgraph_nodes.langsmith_logger import log_fix_attempt
+from app.utils.cleaner import clean_code_block
 
-MAX_RETRIES=2
+MAX_RETRIES=1
 
 
 def run_pytest(project_path: str) -> tuple[bool,str]:
@@ -46,4 +47,5 @@ def fix_code_with_groq(test_code: str, error:str, broken_code: str)-> str:
 
     """
 
-    return call_groq(prompt)
+    code=call_groq(prompt)
+    return clean_code_block(code)

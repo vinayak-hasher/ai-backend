@@ -1,26 +1,24 @@
-Here is the corrected Python code:
-
-```
-from typing import List
-
-class Employee:
-    def __init__(self, id: int):
-        self.id = id
-        self.pods = []
+from typing import Optional
 
 class Pod:
-    def __init__(self, id: int):
-        self.id = id
-        self.employees = []
+    def __init__(self, name: str):
+        self.name = name
 
-class Manager:
-    def assign_employee_to_pod(self, employee: Employee, pod: Pod) -> None:
-        if employee is None:
-            raise TypeError("Employee cannot be None")
-        if pod is None:
-            raise TypeError("Pod cannot be None")
-        if employee in pod.employees:
-            raise ValueError("Employee is already assigned to this pod")
-        pod.employees.append(employee)
-        employee.pods.append(pod)
-```
+class Employee:
+    def __init__(self, name: str, email: str):
+        self.name = name
+        self.email = email
+        self.assigned_pod: Optional[Pod] = None
+
+    def assign_pod(self, pod: Pod) -> None:
+        self.assigned_pod = pod
+
+    def view_assigned_pod(self) -> Optional[Pod]:
+        return self.assigned_pod
+
+    def recommend_colleague(self, colleague: 'Employee') -> str:
+        if colleague == self:
+            raise ValueError("Cannot recommend self")
+        if not self.assigned_pod:
+            raise ValueError("Employee must be assigned to a pod to recommend a colleague")
+        return f"{colleague.name} recommended successfully"
