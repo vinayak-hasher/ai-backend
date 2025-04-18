@@ -88,7 +88,7 @@ def readme_content():
 
 
 def write_routes(endpoints, base_path):
-    route_file = f"{base_path}/app/api/routes/example.py"
+    route_file = f"{base_path}/app/api/routes/main_route.py"
     content = "from fastapi import APIRouter\n\nrouter = APIRouter()\n\n"
     for ep in endpoints:
         method = ep.get("method", "get").lower()
